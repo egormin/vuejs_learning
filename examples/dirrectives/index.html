@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{ message }}</h1> 
+        <!-- <strong>Hello</strong>, World! -->
+
+        <h1 v-text="message"></h1> 
+        <!-- <strong>Hello</strong>, World! -->
+
+        <h1 v-html="message"></h1> 
+        <!-- Hello, World! --> 
+
+        <h1 v-show="view" v-html="message"></h1> 
+        <!-- --> <!-- the same as display:none --> 
+
+        <h3 v-if="view" v-html="message"></h3> 
+        <!-- --> <!-- the same but delete object from html code (DOM) --> 
+
+        <h4 v-else="view" v-html="message"></h4> 
+        <!-- --> <!-- the same but delete object from html code (DOM). Only when view=true --> 
+    
+        <input type="text" v-model="msg">
+        <h1> {{ msg }}</h1>
+        <!-- shows text online, but should be defined msg: '' --> 
+
+        <input type="checkbox" v-model="chbox">
+        <label for="checkbox">{{ chbox }}</label>
+        <!-- shows text online, but should be defined msg: '' --> 
+
+        <h3 v-pre>{{ msg }} </h3> 
+        <!-- {{ msg }} --> <!-- Skip compilation. Not define variables and so on --> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
