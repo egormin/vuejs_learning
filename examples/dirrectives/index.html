@@ -33,8 +33,14 @@
         <label for="checkbox">{{ chbox }}</label>
         <!-- shows text online, but should be defined msg: '' --> 
 
+        <input type="text" v-model="text">
         <h3 v-pre>{{ msg }} </h3> 
         <!-- {{ msg }} --> <!-- Skip compilation. Not define variables and so on --> 
+    
+        <input type="text" v-model="text">
+        <h1>Hi {{ text }}</h1>
+        <!-- Hi fafafZX --> <!-- Will add text from input to Hi -->  
+    
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

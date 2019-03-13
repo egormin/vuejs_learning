@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="app">
+    <div class="container">
+        <h1>App</h1>
+        
+        <button v-on:click="countUp" class="btn btn-success">+1</button>
+        <!-- v-on:click = @click (the same meaning)  -->
+        <button @click="countDown" class="btn btn-success">-1</button>
+        <h3>{{ count }}</h3>
+        
+        <h1>___________________________________</h1>
+    </div>
+</div>
+
+<div id="app2">
+    <div class="container">
+        <h1>App2</h1>
+        <h3>App: <a v-bind:href="url"> {{ cleanUrl }}</a> </h3>
+        <input type="text" class="form-control" v-model="url">
+        <button @click="cleanerUrl" class="btn btn-primary">Clean URL</button>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

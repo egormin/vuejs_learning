@@ -4,6 +4,7 @@ var app = new Vue ({
         message: '<strong>Hello</strong>, World!',
         view: true,
         msg: '',
-        chbox: 'true'
+        chbox: 'true',
+        text: '',
     }
 })
